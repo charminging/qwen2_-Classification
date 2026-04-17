@@ -30,8 +30,7 @@ use_cpu=True
 # 创建标签到索引的映射
 label_to_id = {
     "积极": 0,
-    "消极": 1,
-    "中立": 2
+    "消极": 1
 }
 num_labels = len(label_to_id)  # 根据你的标签数量设置num_labels
 
