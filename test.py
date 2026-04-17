@@ -1,12 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-'''
-@File    : test.py
-@Date    : 2024/06/11 20:32:26
-@Author  : muyaostudio
-@Version : 1.0
-@Desc    : 
-'''
+
 
 from transformers import Qwen2ForSequenceClassification, Qwen2Tokenizer
 import torch
