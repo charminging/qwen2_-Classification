@@ -1,12 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-'''
-@File    : train.py
-@Date    : 2024/06/11 20:01:24
-@Author  : muyaostudio
-@Version : 1.0
-@Desc    : 
-'''
+
 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from transformers import Trainer, TrainingArguments
