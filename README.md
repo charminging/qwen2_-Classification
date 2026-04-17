@@ -1,9 +1,9 @@
 # qwen2_seq_cls
-使用 Qwen2ForSequenceClassification 简单实现文本分类任务（本仓库实现的是 BERT/GPT2 时代接个线性层做分类的范式，不是如今常用的使用 Prompt 预测下一个 token 的范式）。
+使用 Qwen2ForSequenceClassification 简单实现文本分类任务（本仓库实现的是接个线性层做分类的范式）。
 
 
 ## 使用说明
-Qwen2 的 [modeling.py](https://github.com/huggingface/transformers/blob/main/src/transformers/models/qwen2/modeling_qwen2.py#L1279) 实现了分类逻辑（见最后补充说明），跟几年前用 GPT2 做 SequenceClassification 任务一样，都是把模型最后的 `lm_head` 替换成一个线性层预测各个类别标签的概率分布。模型会通过最后一个 token 的 hidden state 做分类。Qwen2ForSequenceClassification 实现了单标签分类和多标签分类，如果有需要，自行魔改即可。
+Qwen2 的 [modeling.py](https://github.com/huggingface/transformers/blob/main/src/transformers/models/qwen2/modeling_qwen2.py#L1279) 实现了分类逻辑（见最后补充说明），是把模型最后的 `lm_head` 替换成一个线性层预测各个类别标签的概率分布。模型会通过最后一个 token 的 hidden state 做分类。Qwen2ForSequenceClassification 实现了单标签分类和多标签分类，如果有需要，自行修改即可。
 
 本仓库包含三个文件：
 - train.py：训练代码，自行修改开头那些自定义参数，执行 `python train.py` 即可启动训练。
